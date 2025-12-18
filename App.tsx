@@ -12,7 +12,7 @@ export default function App() {
       <StatusBar style="light" />
       <SafeAreaView style={{ flex: 1 }}>
         <WebView
-          source={{ uri: 'https://webcad.online/index.html' }}
+          source={{ uri: 'http://www.webcad.online/index.html' }}
           style={styles.webview}
           onLoadStart={() => { setLoading(true); console.log('start'); }}
           onLoadEnd={() => { console.log('end'); setTimeout(() => setLoading(false), 3000); }}
@@ -21,7 +21,7 @@ export default function App() {
         />
         {loading && (
           <View style={styles.loadingOverlay}>
-            <ActivityIndicator color="#666" />
+            <ActivityIndicator color="#000" />
           </View>
         )}
       </SafeAreaView>
